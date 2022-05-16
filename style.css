@@ -1,0 +1,783 @@
+html {
+	height: 100%;
+	font-family: Baloo;
+	letter-spacing: 2px;
+	color: #fff;
+	text-shadow: 2px 2px #004aad;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 10px;
+	padding: 10px;
+	background-color: #004aad;
+	background: url("img/food-icons_2.png");
+}
+
+#page-container {
+	flex: 1;
+	position: relative;
+	min-height: 100%;
+}
+
+#content-wrap {
+	overflow: auto;
+	padding-bottom: 150px;
+}
+
+header {
+	position: relative;
+	height: 150px;
+	color: #f3c613;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 100px;
+	font-weight: bold;
+	background-repeat: round;
+	background-image: url(/img/header-img/yellow-brick.jpg);
+}
+
+.top-left {
+	position: absolute;
+	top: -55%;
+	left: 0px;
+}
+
+.top-right {
+	position: absolute;
+	top: -55%;
+	right: 0px;
+}
+
+.home-page,
+.about-us {
+	background-color: #004aad;
+	color: #f3c613;
+}
+
+.home-page:hover,
+.about-us:hover {
+	animation-name: lighten-blue;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes lighten-blue {
+	100% {
+		background-color: #0060E0;
+	}
+}
+
+.contact-button {
+	height: 40px;
+	width: 50px;
+  margin: 0px, 5px;
+	background: none;
+}
+
+.header-contact-button {
+	position: absolute;
+  height: 40px;
+  width: 50px;
+	top: -70px;
+	left: -15px;
+}
+
+#contact {
+  display: inline-block;
+  height: 30px;
+  width: 40px;
+}
+
+.header-follow-button {
+	position: absolute;
+  height: 40px;
+  width: 50px;
+	top: -70px;
+	left: 30px;
+}
+
+#follow {
+  display: inline-block;
+  height: 50px;
+  width: 60px;
+}
+
+.instructions {
+	text-align: center;
+}
+
+.over-img {
+	position: absolute;
+	height: 150px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+h1 {
+	text-align: center;
+	color: #f3c613;
+}
+
+#truck-category {
+	margin: 0;
+	text-align: center;
+}
+
+#truck-category span {
+	margin: 10px;
+	font-size: 60px;
+}
+
+#button-box {
+	text-align: center;
+	padding: 4px 10px;
+	border-radius: 4px;
+	margin: 0 5px;
+}
+
+#input-box {
+	text-align: center;
+	border-radius: 4px;
+	margin-top: 15px;
+}
+
+#truck-drop {
+	display: inline-flex;
+}
+
+input {
+	margin: 15px auto;
+	display: block;
+	border: none;
+	height: 30px;
+	background: #fff;
+	border-radius: 8px;
+	text-align: center;
+}
+
+button {
+	font-family: Baloo;
+	font-weight: 700;
+	letter-spacing: 2px;
+	background: #f3c613;
+	color: #004aad;
+	border: none;
+	padding: 4px 10px;
+	border-radius: 4px;
+	margin: 0 5px;
+}
+
+#select-truck:hover,
+#add:hover,
+#remove:hover {
+	animation-name: turn-to-gold;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes turn-to-gold {
+	100% {
+		background-color: #C9A30A;
+	}
+}
+
+img {
+	float: left;
+	height: 100%;
+}
+
+.buttons-wrapper {
+	display: flex;
+	justify-content: center;
+	margin: 10px 40px;
+}
+
+.popout-line {
+	width: 100%;
+	height: 4rm;
+	font-size: 40px;
+	overflow: hidden;
+	padding: 0;
+	margin-bottom: 16px;
+}
+
+.category {
+	animation: 2s anim-popoutin ease;
+	animation-iteration-count: 1;
+}
+
+@keyframes anim-popoutin {
+	0% {
+		color: black;
+		transform: scale(0);
+		opacity: 0;
+		text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+	}
+
+	25% {
+		color: #f3c613;
+		transform: scale(2);
+		opacity: 1;
+		text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+	}
+
+	50% {
+		color: black;
+		transform: scale(1);
+		opacity: 1;
+		text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+		text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+#container-message {
+	position: relative;
+	top: 70px;
+	margin-top: 20px;
+	margin-bottom: -90px;
+	filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+	position: absolute;
+	width: 100%;
+	display: inline-block;
+	color: #f3c613;
+	font-size: 30px;
+	text-align: center;
+	user-select: none;
+}
+
+.collapsible {
+	display: flex;
+	max-width: 300px;
+	background-color: #fff;
+	color: #444;
+	cursor: grab;
+	padding: 18px;
+	border: solid 5px #f3c613;
+	border-radius: 4px;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	outline: none;
+	font-size: 15px;
+	margin: 15px;
+	box-shadow: 10px 10px 30px 5px #003781;
+}
+
+.profile-details {
+	max-width: 150px;
+}
+
+.collapsible:hover {
+	animation-name: fade-to-gray;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fade-to-gray {
+	100% {
+		background-color: #ccc
+	}
+}
+
+.card-image {
+	border-radius: 4px;
+}
+
+.profile-placeholder {
+	height: 150px;
+	width: 150px;
+}
+
+.profile-details {
+	width: 150px;
+}
+
+.profile-name {
+	color: #444;
+}
+
+.profile-tags {
+	color: #444;
+}
+
+.active:hover {
+	background-color: #ccc;
+}
+
+#content {
+	padding: 0px;
+	overflow-y: scroll;
+	background-color: white;
+	border: solid 2px #fff;
+	border-radius: 4px;
+	color: #fff;
+	font-family: Baloo;
+	max-height: 95%;
+	width: auto;
+	margin-top: 5px;
+	border: solid, #f3c613, 20px;
+}
+
+.container {
+	text-align: center;
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container-images {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.user-bio {
+	background-color: #70a6c7;
+	width: auto;
+}
+
+ul {
+	.row {}
+
+	width: auto;
+	margin-bottom: 5px;
+}
+
+li:nth-child(even) {
+	background: #CCC;
+}
+
+li:nth-child(odd) {
+	background: #fff;
+}
+
+#list-name-header {
+	/*   background: linear-gradient(90deg, #ff0000, #ffff00, #ff00f3, #0033ff, #ff00c4, #ff0000); */
+	background: linear-gradient(90deg, #0060E0, #003781, #0060E0);
+	background-size: 200%;
+	font-size: 30px;
+	font-family: baloo;
+	letter-spacing: 10px;
+	margin: 0px;
+	padding: 5px;
+	font-weight: 600;
+	word-spacing: 5px;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	animation: header 5s linear infinite;
+}
+
+@keyframes header {
+	0% {
+		background-position: 0% 50%
+	}
+
+	50% {
+		background-position: 100% 50%
+	}
+
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+.card {
+	border: solid 2px #fff;
+	border-radius: 4px;
+	padding: 20px;
+	color: #004aad;
+	text-shadow: none;
+	font-weight: 600;
+	/*     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+	background: linear-gradient(-45deg, #f3c613, #fff, gold, goldenrod, #fff);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.view-map {
+	background-color: #004aad;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.modal-link {
+	color: #f3c613;
+	justify-content: center;
+}
+
+#truck-box,
+#friend-list {
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: center;
+}
+
+/* #friend-list {
+    text-align: center;
+    padding: 18px;
+    background-color: red;
+} */
+
+/* modal */
+#modal {
+	background: url("img/food-icons_2.png");
+	padding: 20px;
+	height: 80%;
+	max-width: 600px;
+	margin: 0 auto;
+	position: relative;
+	top: 10%;
+	border: solid 5px #f3c613;
+	border-radius: 4px;
+}
+
+#overlay,
+#overlay-2 {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+#modal-button-right,
+#modal-2-button-right {
+	text-align: right;
+}
+
+#sharedtruck {
+	text-align: center;
+}
+
+img:payment-placeholder {
+	border-radius: 50%;
+}
+
+footer {
+	display: flex;
+	position: relative;
+	height: 150px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	color: #f3c613;
+	background-repeat: round;
+	background-image: url(/img/header-img/yellow-brick.jpg);
+}
+
+#scrolling-text {
+	position: relative;
+	bottom: -20%;
+	font-size: clamp(20px, 4vw, 300px);
+	/*color: hidden;*/
+	/*-webkit-text-stroke: 0.3vw #004aad;*/
+	text-transform: uppercase;
+}
+
+#scrolling-text:before {
+	content: attr(data-text);
+	position: absolute;
+	width: 0;
+	font-size: clamp(20px, 4vw, 300px);
+	height: 100%;
+	color: #004aad;
+	/*-webkit-text-stroke: 0vw #383d52;*/
+	border-right: 2px solid #004aad;
+	overflow: hidden;
+	animation: fill-in 10s linear infinite;
+}
+
+@keyframes fill-in {
+
+	0%,
+	100% {
+		width: 0;
+	}
+
+	25% {
+		width: 0;
+	}
+
+	50% {
+		width: 100%;
+	}
+
+	75% {
+		width: 100%;
+	}
+}
+
+.footer-top-right {
+	position: absolute;
+	top: 5%;
+	right: 0px;
+}
+
+.footer-top-left {
+	position: absolute;
+	top: 0;
+	left: -18px;
+}
+
+.footer-top-center {
+	position: absolute;
+	top: 5%;
+	center: 0px;
+}
+
+.footer-bottom-center {
+	position: absolute;
+	top: 5%;
+	center: 0px;
+}
+
+.footer-bottom-left {
+	position: absolute;
+	bottom: 5%;
+	left: 0px;
+}
+
+.footer-bottom-right {
+	position: absolute;
+	bottom: 5%;
+	right: 0px;
+}
+
+#overlay-2 {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+#close-modal-2 {
+	background-color: #f3c613;
+	color: #004aad;
+	padding: 10px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#close-modal-2:hover {
+	animation-name: turn-to-gold;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes turn-to-gold {
+	100% {
+		background-color: #C9A30A;
+	}
+}
+
+#modal-2 {
+	background: url("img/food-icons_2.png");
+	padding: 20px;
+	height: 80%;
+	max-width: 600px;
+	margin: 0 auto;
+	position: relative;
+	top: 10%;
+	border: solid 5px #f3c613;
+	border-radius: 4px;
+	overflow: auto;
+}
+
+#modal-2 img {
+	height: 300px;
+}
+
+.mobile {
+	display: none;
+}
+
+@media (max-width: 500px) {
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: flex;
+	}
+}
+
+iframe {
+	display: none;
+	width: 100%;
+	height: 100%;
+}
+
+.mapcontainer,
+#myModal {
+	display: none;
+}
+
+/* Beginning of Carousel CSS */
+
+.carousel {
+	height: 200px;
+	width: 200px;
+	padding: 20px;
+	border-radius: 1px;
+/*   border-color: #003781; */
+/*   box-shadow: 10px 10px 30px 5px #003781; */
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item-hidden {
+	display: none;
+}
+
+.carousel .carousel-item-visible {
+	display: block;
+	animation: fadeVisibility 1s;
+}
+
+.carousel .carousel-item img {
+	width: 200px;
+	height: 200px;
+}
+
+.carousel .carousel-actions {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.carousel .carousel-actions button {
+	border-radius: 50px;
+	border: 0;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	/*   margin: 0 20px; */
+}
+
+.carousel .carousel-actions button#carousel-button-prev {
+	margin-left: 50px;
+}
+
+#carousel-button-prev {
+  background: #C9A30A;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.carousel .carousel-actions button#carousel-button-next {
+	margin-right: 50px;
+}
+
+#carousel-button-next {
+  background: #C9A30A;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+@keyframes fadeVisibility {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* End of Carousel CSS */
+
+.ybr-image {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	/*   margin-left: auto;
+  margin-right: auto; */
+	margin: 20px;
+	width: 90%;
+	/*   padding: 50px 50px 50px 50px; */
+	border: solid 5px #ffffff;
+	border-radius: 4px;
+}
+
+.ybr-paragraph {
+	text-align: center;
+  font-size: 15px;
+	padding: 10px 50px 10px 50px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: #f3c613;
+  border: 4px solid white;
+  border-radius: 4px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+h2 {
+	font-size: 30px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 20px;
+	text-align: center;
+}
+
+.contact-button ,.home-page ,#select-truck ,#remove ,#open-modal-2 ,#close-modal-2 ,#close-modal ,.collapsible{
+  cursor: pointer;
+}
+/* .home-page{
+    cursor:pointer;
+} */

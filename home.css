@@ -1,0 +1,518 @@
+html {
+	height: 100%;
+	font-family: Baloo;
+	letter-spacing: 2px;
+	color: #fff;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 10px;
+	padding: 10px;
+	background-color: #004aad;
+	background: url("img/food-icons_2.png");
+}
+
+#page-container {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	min-height: 100%;
+}
+
+#content-wrapper {
+  
+}
+
+header {
+	font-family: Baloo;
+	height: 150px;
+	color: #004aad;
+	position: relative;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	font-size: 100px;
+	font-weight: bold;
+	background-repeat: round;
+	background-image: url(/img/header-img/yellow-brick.jpg);
+}
+
+.over-img {
+	position: absolute;
+	height: 150px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.top-right {
+	position: absolute;
+	top: -40px;
+	right: 0px;
+}
+
+.contact-button {
+	height: 40px;
+	width: 50px;
+  margin: 0px, 5px;
+	background: none;
+}
+
+.header-contact-button {
+	position: absolute;
+  height: 40px;
+  width: 50px;
+	top: -70px;
+	left: -15px;
+}
+
+#contact {
+  display: inline-block;
+  height: 30px;
+  width: 40px;
+}
+
+.header-follow-button {
+	position: absolute;
+  height: 40px;
+  width: 50px;
+	top: -70px;
+	left: 30px;
+}
+
+#follow {
+  display: inline-block;
+  height: 50px;
+  width: 60px;
+}
+
+.guest {
+	/*display: block;*/
+	background-color: #004aad;
+	color: #f3c613;
+	width: 125px;
+	font-size: 20px;
+	height: 100px;
+	border-radius: 4px;
+	margin: 10px;
+	text-align: center;
+	cursor: pointer;
+	animation: wiggle 2s linear infinite;
+}
+
+@keyframes wiggle {
+
+	0%,
+	7% {
+		transform: rotateZ(0);
+	}
+
+	15% {
+		transform: rotateZ(-15deg);
+	}
+
+	20% {
+		transform: rotateZ(10deg);
+	}
+
+	25% {
+		transform: rotateZ(-10deg);
+	}
+
+	30% {
+		transform: rotateZ(6deg);
+	}
+
+	35% {
+		transform: rotateZ(-4deg);
+	}
+
+	40%,
+	100% {
+		transform: rotateZ(0);
+	}
+}
+
+.wiggle {
+	text-align: center;
+	width: 100%;
+}
+
+.title {
+	color: #f3c613;
+	font-size: clamp(30px, 2vw, 50px);
+	margin: 0;
+}
+
+#dock {
+	flex: 1;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin: 0px;
+}
+
+.home,
+.favorites,
+.contact {
+	padding: 10px;
+	color: black;
+	text-align: center;
+	background-color: #f3c613;
+	border-radius: 4px;
+	margin: 5px;
+	width: 60px;
+}
+
+.logo {
+	justify-content: start;
+}
+
+a {
+	color: black;
+}
+
+#forgot:hover {
+	color: red;
+}
+
+.left-title {
+	margin: 0;
+}
+
+.right-title {
+	margin: 0;
+}
+
+.left-card,
+.center-card,
+.right-card {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	text-align: center;
+	justify-content: space-evenly;
+	align-items: center;
+	padding: 20px;
+}
+
+#close-modal {
+	background-color: #f3c613;
+	color: #004aad;
+	padding: 15px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#close-modal:hover {
+	animation-name: turn-to-gold;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes turn-to-gold {
+	100% {
+		background-color: #C9A30A;
+	}
+}
+
+#modal {
+	background: url("img/food-icons_2.png");
+	padding: 20px;
+	height: 80%;
+	max-width: 600px;
+	margin: 0 auto;
+	position: relative;
+	top: 10%;
+	border: solid 5px #f3c613;
+	border-radius: 4px;
+	overflow: auto;
+}
+
+#modal img {
+	height: 300px;
+}
+
+#modal-button-right {
+	text-align: right;
+}
+
+#overlay {
+	display: none;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+#email,
+#email2,
+#password {
+	height: 60px;
+	width: 75%;
+	font-size: clamp(10px, 2vw, 20px);
+	margin: 5px 0px;
+	border-radius: 4px;
+	background-color: lightgray;
+	border: none;
+}
+
+.customer,
+.vendor {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: clamp(30px, 2vw, 40px);
+	width: clamp(300px, 40vw, 700px);
+	margin: 10px;
+	border: solid 5px #f3c613;
+	border-radius: 4px;
+	background-color: white;
+	padding: 10px;
+}
+
+.login,
+.login2 {
+	width: 75%;
+	font-size: clamp(30px, 2vw, 40px);
+	margin: 5px 0px;
+	border-radius: 4px;
+	color: #004aad;
+	background-color: #f3c613;
+	border: none;
+}
+
+.login:hover,
+.login2:hover {
+	animation-name: turn-to-gold;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes turn-to-gold {
+	100% {
+		background-color: #C9A30A;
+	}
+}
+
+.create-account {
+	width: 75%;
+	font-size: clamp(30px, 2vw, 40px);
+	margin: 5px 0px;
+	border-radius: 4px;
+	color: #f3c613;
+	background-color: #004aad;
+	border: none;
+}
+
+.create-account:hover {
+	animation-name: lighten-blue;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes lighten-blue {
+	100% {
+		background-color: #0060E0;
+	}
+}
+
+footer {
+	display: flex;
+	position: relative;
+	height: 150px;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	color: #f3c613;
+	text-shadow: 2px 2px #004aad;
+	background-repeat: round;
+	background-image: url(/img/header-img/yellow-brick.jpg);
+}
+
+img {
+	float: left;
+	height: 100%;
+}
+
+.footer-top-right {
+	position: absolute;
+	top: 5%;
+	right: 0px;
+}
+
+/*.bottom-left {
+	position: absolute;
+	top: 0;
+	left: -18px;
+}
+
+.bottom-center {
+	position: absolute;
+	top: 5%;
+}
+
+.bottom-right {
+	position: absolute;
+	top: 5%;
+	right: 0px;
+}*/
+
+.ybr-image {
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	/*   margin-left: auto;
+  margin-right: auto; */
+	margin: 20px;
+	width: 90%;
+	/*   padding: 50px 50px 50px 50px; */
+	border: solid 5px #ffffff;
+	border-radius: 4px;
+}
+
+h2 {
+	font-size: 30px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 20px;
+	text-align: center;
+}
+
+.ybr-paragraph {
+	text-align: center;
+	padding: 10px 50px 10px 50px;
+}
+
+.view-map {
+	background-color: #004aad;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: #f3c613;
+  border: 4px solid white;
+  border-radius: 4px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.modal-link {
+	color: #f3c613;
+	justify-content: center;
+}
+
+.home-page,
+.about-us {
+	background-color: #004aad;
+	color: #f3c613;
+}
+
+.home-page:hover,
+.about-us:hover {
+	animation-name: lighten-blue;
+	animation-duration: 500ms;
+	animation-fill-mode: forwards;
+}
+
+@keyframes lighten-blue {
+	100% {
+		background-color: #0060E0;
+	}
+}
+
+button {
+	font-family: Baloo;
+	letter-spacing: 2px;
+	background: #004aad;
+	color: #f3c613;
+	border: none;
+	padding: 4px 10px;
+	border-radius: 4px;
+	margin: 0 5px;
+}
+
+#scrolling-text {
+	position: relative;
+	bottom: -20%;
+	font-size: clamp(20px, 4vw, 300px);
+	text-transform: uppercase;
+}
+
+#scrolling-text:before {
+	content: attr(data-text);
+	position: absolute;
+	width: 0;
+	font-size: clamp(20px, 4vw, 300px);
+	height: 100%;
+	color: #004aad;
+	border-right: 2px solid #004aad;
+	overflow: hidden;
+	animation: fill-in 10s linear infinite;
+}
+
+@keyframes fill-in {
+
+	0%,
+	100% {
+		width: 0;
+	}
+
+	25% {
+		width: 0;
+	}
+
+	50% {
+		width: 100%;
+	}
+
+	75% {
+		width: 100%;
+	}
+}
+
+.mobile {
+	display: none;
+}
+
+@media (max-width: 600px) {
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: block;
+	}
+
+	.guest {
+		background-color: #f3c613;
+		color: #004aad;
+		margin-top: 20px;
+	}
+
+	.customer,
+	.vendor {
+		margin: 0px;
+	}
+}
+.contact-button ,.home-page ,.create-account ,#login ,#open-modal-2 ,#login2{
+  cursor:pointer;
+}
