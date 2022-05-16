@@ -20,7 +20,7 @@ const port = process.env.PORT || 3000
 app.use(express.static('./'));
 
 app.get('/', function (req, res) {
-   res.render('index.html');
+   res.sendFile(__dirname + '/index.html');
 });
 
 
