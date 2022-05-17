@@ -231,7 +231,7 @@ window.showModal = (index) => {
   </div>
 </div>
 <p class="title">Located at:<br>${contentArray[index].Address} </p>
-${contentArray[index].Email=="NULL"? "":`<p>${contentArray[index].Email}</p>`}
+
 <p>${contentArray[index].Phone.toUpperCase()!="NULL"?contentArray[index].Phone:""}</p>
 <p>${contentArray[index].Description}</p>
 <p>${contentArray[index].Hours_of_Operation.split(".").map(i=>`<p>${i}</p>`).toString().replaceAll(',','')}</p>
